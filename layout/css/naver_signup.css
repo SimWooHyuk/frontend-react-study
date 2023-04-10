@@ -1,0 +1,125 @@
+/* 공통 스타일 */
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: Dotum, 돋움, Helvetica, sans-serif;
+    font-size: 12px;
+    text-size-adjust: none;
+  background-color: #f5f6f7;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+/* 헤더 영역 */
+header {
+  width: 100%;
+  background-color: orange;
+}
+header .top {
+  max-width: 768px;
+  height: 124px;
+  margin: 0 auto;
+  background-color: beige;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 메인 영역 */
+#container {
+  max-width: 768px;
+  background-color: royalblue;
+  margin: 0 auto;
+  height: 996px;
+}
+#container .section-input {
+  width: 460px;
+  margin: 0 auto;
+  background-color: coral;
+}
+
+#id {
+  display: block;
+  padding: 10px 110px 10px 14px;
+}
+
+.input-group-row {
+  position: relative;
+}
+
+.input-group-row span {
+  position: absolute;
+  top: 12px;
+  right: 88px;
+}
+
+#password {
+  display: block;
+  padding: 10px 110px 10px 14px;
+}
+#Confirm-password {
+  display: block;
+  padding: 10px 110px 10px 14px;
+}
+#Name {
+  display: block;
+  padding: 10px 110px 10px 14px
+}
+
+.container{
+  display: flex;
+}
+.container .ymd {
+  width: 40px;
+  height: 10px;
+}
+.box {
+  display: block;
+    width: 500px;
+    height: 51px;
+    box-sizing: border-box;
+}
+
+.yy {
+  position: relative;
+}
+.yy span {
+  position: absolute;
+  top: 12px;
+  right: 88px;
+}
+.mm {
+  position: relative;
+}
+.yy span {
+  position: absolute;
+  top: 12px;
+  right: 88px;
+}
+.dd {
+  position: relative;
+}
+.dd span {
+  position: absolute;
+  top: 12px;
+  right: 88px;
+}
+footer .bottom {
+  max-width: 768px;
+  height: 83px;
+  margin: 0 auto;
+  background-color: burlywood;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
