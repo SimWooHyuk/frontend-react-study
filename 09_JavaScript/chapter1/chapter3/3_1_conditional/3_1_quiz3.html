@@ -22,15 +22,18 @@
         document.write('합격')
       } else {
         document.write('불합격')
-      } else if (jumsu >= 70) {
+      }
+      if (grade < 0) {
+        document.write('0보다 작은 학년을 입력할 순 없습니다')
+      }
+
+      if (jumsu >= 70) {
         document.write('합격')
       } else {
         document.write('불합격')
-      } else if{ (grade < 0) {
-        document.write('0보다 작은 학년을 입력할 순 없습니다')
       }
-    }
-      };
+    
+    };
 
     // 풀이3
 
