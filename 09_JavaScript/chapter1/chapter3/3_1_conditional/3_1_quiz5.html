@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +10,41 @@
     // 문제5
     // 사용자로부터 세 개의 정수를 입력받아, 
     // 그 수들의 최대값과 최소값, 합계와 평균을 구해서 브라우저에 출력하세요.
+    let first = prompt("첫번째 숫자를 적으세요");
+    let second = prompt("두번째 숫자를 적으세요");
+    let third = prompt("세번째 숫자를 적으세요");
 
+    let max = first;
+    if (second > max) {
+      max = second;
+    }
+    if (third > max) {
+      max = third;
+    }
+
+    let min = first;
+    if (second < min) {
+      min = second;
+    }
+    if (third < min) {
+      min = third;
+    }
+
+    let hapge = Number(first) + Number(second) + Number(third);
+    let pyunggun = hapge / 3 ;
+
+    document.write("최대값: " + max + "<br>");
+    document.write("최소값: " + min + "<br>");
+    document.write("합계: " + hapge + "<br>");
+    document.write("평균: " + pyunggun + "<br>");
     // 풀이5
     // 주의! 덧셈을 하려면 숫자로 변환해 줄 것!!
-    
+
   </script>
 </head>
+
 <body>
-  
+
 </body>
+
 </html>
