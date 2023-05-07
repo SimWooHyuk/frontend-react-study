@@ -18,26 +18,29 @@
     const jumsu = window.prompt('점수를 입력하세요', '')
 
     if (grade < 4) {
-      if (jumsu >= 60) {
+      if (jumsu >= 60 && jumsu < 101) {
         document.write('합격')
       } else {
         document.write('불합격')
       }
-    }
-     if (grade < 0 || grade > 6) {
-      alert('1~6 학년을 입력해주세요')
-      }
-     if (jumsu < 0 || jumsu > 100) {
+    if (jumsu < 0 || jumsu > 100) {
       alert('에러입니다')
-      }
+    }
+    }
+    if (grade < 0 || grade > 6) {
+      alert('1~6 학년을 입력해주세요')
+    }
 
-    if (grade >=4) {
-      if (jumsu >= 70) {
+
+    if (grade >= 4) {
+      if (jumsu >= 70 && jumsu < 101) {
         document.write('합격')
       } else {
         document.write('불합격')
       }
-    
+      if (jumsu < 0 || jumsu > 100) {
+      alert('에러입니다')
+    }
     };
 
     // 풀이3
