@@ -20,22 +20,40 @@
     // 3) 돈이 모자랄 때 에러 메시지 출력 후 새로고침(location.reload();)
 
     const money = Number(prompt('돈을 넣어주세요.', '0'));
-    const gwaja = prompt('허니버터, 칸쵸, 프링글스 중 선택')
     let change = 0; // 거스름돈
-
-    honey = ( - 1300); 
-    kancho = (money - 1500); 
-    pring = (money - 3000); 
-    if (honey) {
-     if (honey < 0){
-      location.reload('잔액부족');
-     if (honey >= 0) {
-      허니버터칩
-    } 
-    } 
-  }
-    // 풀이
     
+    
+    // 풀이
+    if (money <= 0 || isNaN(money)) { // 정상적인 돈 값이 입력되지 않았을 때
+      alert('돈을 다시 넣어주세요.');
+      location.reload(); // 새로고침
+    } else { // 정상적인 돈 값이 입력된 경우
+      const snack = prompt('허니버터, 칸쵸, 프링글스 중 선택', '');
+      
+      switch (snack) {
+        case '허니버터':
+          change = money -1300;
+          break;
+        case '칸쵸':
+          change = money -1500;
+          break;
+        case '프링글스':
+          change = money -3000;
+          break;
+      
+        default: // 없는 과자 종류 입력 시
+        alert('해당 과자가 없습니다')
+        location.reload();
+          break;
+      }
+
+      if (change < 0) { // 돈이 모자랄 때
+        alert('돈이 모자랍니다.');
+        location.reload();
+      }
+
+      document.write(`${snack}) 나왔습니다! 거스름돈은 ${change}원 입니다.`);
+    }
   </script>
 </head>
 <body>

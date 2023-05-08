@@ -10,9 +10,9 @@
     // 문제5
     // 사용자로부터 세 개의 정수를 입력받아, 
     // 그 수들의 최대값과 최소값, 합계와 평균을 구해서 브라우저에 출력하세요.
-    let first = prompt("첫번째 숫자를 적으세요");
-    let second = prompt("두번째 숫자를 적으세요");
-    let third = prompt("세번째 숫자를 적으세요");
+    const first = Number(prompt("첫번째 숫자를 적으세요"));
+    const second = Number(prompt("두번째 숫자를 적으세요"));
+    const third = Number(prompt("세번째 숫자를 적으세요"));
 
     let max = first;
     if (second > max) {
@@ -21,6 +21,7 @@
     if (third > max) {
       max = third;
     }
+    //max = Math.max(first,second,third)
 
     let min = first;
     if (second < min) {
@@ -29,6 +30,8 @@
     if (third < min) {
       min = third;
     }
+    //max = Math.min(first,second,third)
+
 
     let hapge = Number(first) + Number(second) + Number(third);
     let pyunggun = hapge / 3 ;
