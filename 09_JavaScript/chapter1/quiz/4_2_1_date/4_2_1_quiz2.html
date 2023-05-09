@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 문제2
+    // 요일 보여주기
+
+    // 특정 날짜 객체를 생성하면 'SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT' 형식으로 요일을 보여주도록 만들어보세요.
+    // 2가지 방법으로 각각 구현해 볼 것!
+    // 1) 배열을 이용한 방법
+    // 2) 조건문(if 또는 switch)을 이용한 방법
+
+    // 예시:
+    // let date = new Date(2023, 0, 5);  // 2023년 1월 5일
+    // "THU"가 출력되어야 합니다.
+    
+    // const day = new Date(2023, 1, 20);
+    // let day = new Date(2023, 0, 5);  // 2023년 1월 5일
+
+    let day = new Date(2023, 0, 5);
+    const theYear = day.getFullYear();
+    const theMonth = day.getMonth();
+    const theDate = day.getDate();
+    const theDay = day.getDay(); 
+
+    document.write('연도: '+ theYear, '<br>')
+    document.write('월: '+ theMonth, '<br>')
+    document.write('일: '+ theDate, '<br>')
+    document.write('요일: '+ theDay  , '<br>')
+    // 풀이2-1
+    let days;
+    switch (key) {
+      case value:
+        
+        break;
+    
+      default:  
+        break;
+    }
+    // 풀이2-2
+    let daysList = ['일요일','월요일','화요일','수요일','목요일','금요일','토요일',];
+    document.write(daysList[day.getDay()]);
+
+    // the day가 가진 숫자에 따라 요일이 바뀜
+    // the day를
+      // if (theDay ===   0) {
+      //   document.write('일요일')
+      // } else if (theDay === 1) {
+      //   document.write('월요일')
+      // }else if (theDay === 2) {
+      //   document.write('화요일')
+      // }else if (theDay === 3) {
+      //   document.write('수요일')
+      // }else if (theDay === 4) {
+      //   document.write('목요일')
+      // }else if (theDay === 5) {
+      //   document.write('금요일')
+      // }else if (theDay === 6) {
+      //   document.write('토요일')
+      // }   
+      
+      // switch (theDay) {
+      //   case 0: document.write('일요일') 
+      //     break;  
+      //   case 1: document.write('월요일')  
+      //     break;
+      //   case 2: document.write('화요일') 
+      //     break;
+      //   case 3: document.write('수요일') 
+      //     break;
+      //   case 4: document.write('목요일') 
+      //     break;
+      //   case 5: document.write('금요일') 
+      //     break;
+      //   case 6: document.write('토요일')  
+      //     break;
+      
+      //   default:
+      //     break;
+      // }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
