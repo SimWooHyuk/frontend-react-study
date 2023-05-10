@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 문제6
+    // 로또 번호 추첨기(완성)
+    // 반복문을 이용하여 1~45까지의 랜덤한 정수값을 만들어내고 중복값이 아닐때만 배열에 추가해준다.
+    // 로또 번호가 6개가 완성되면 오름차순으로 정렬까지 해서 출력해보세요.
+
+    // const lottoArr = [num1, num2, num3, num4, num5, num6]; // 빈 배열
+    
+    // 풀이6
+    const num1 = Math.floor(Math.random() * 45);
+    const num2 = Math.floor(Math.random() * 45);
+    const num3 = Math.floor(Math.random() * 45);
+    const num4 = Math.floor(Math.random() * 45);
+    const num5 = Math.floor(Math.random() * 45);
+    const num6 = Math.floor(Math.random() * 45);
+    
+    if (num1 === num2,
+        num1 === num3,
+        num1 === num4,
+        num1 === num5,
+        num1 === num6) {
+      Math.floor(Math.random() * 45);
+    } else if (num2 === num1,
+        num2 === num3,
+        num2 === num4,
+        num2 === num5,
+        num2 === num6) {
+      Math.floor(Math.random() * 45);
+    } else if (num3 === num2,
+        num3 === num1,
+        num3 === num4,
+        num3 === num5,
+        num3 === num6) {
+      Math.floor(Math.random() * 45);
+    }
+      else if (num4 === num2,
+        num4 === num3,
+        num4 === num1,
+        num4 === num5,
+        num4 === num6) {
+        Math.floor(Math.random() * 45);
+      }
+    else if (num5 === num2,
+        num5 === num3,
+        num5 === num4,
+        num5 === num1,
+        num5 === num6) {
+      Math.floor(Math.random() * 45);
+    } 
+    else if (num6 === num2,
+        num6 === num3,
+        num6 === num4,
+        num6 === num1,
+        num6 === num5) {
+          Math.floor(Math.random() * 45);
+    }
+
+    document.write(num1,~num2,~num3,~num4,~num5,~num6)
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
