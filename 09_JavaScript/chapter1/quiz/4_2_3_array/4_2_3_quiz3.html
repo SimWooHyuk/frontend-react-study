@@ -14,8 +14,13 @@
 
     // 풀이3
     const hateFruit = prompt('먹기 싫은 과일을 입력하세요');
-    fruits.splice(1, hateFruit);
-
+    const hateIndex = fruits.indexOf(hateFruit);
+    
+    if (hateIndex === -1) {
+      alert('제거할 과일이 없습니다')
+    } else {
+      fruits.splice(hateIndex, 1);
+    }
     console.log(fruits)
   </script>
 </head>
