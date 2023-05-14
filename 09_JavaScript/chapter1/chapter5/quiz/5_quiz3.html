@@ -16,6 +16,17 @@
 
     // 풀이3
     
+
+    let fromNum = prompt(' from값 입력  ')
+    let toNum = prompt(' to값 입력  ')
+    
+    const counter = setInterval(function() {
+    fromNum++;
+    console.log(fromNum);
+    if (fromNum >=  toNum) {
+    clearInterval(counter)
+    }
+    }, 100);
   </script>
 </head>
 <body>
