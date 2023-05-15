@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,21 +16,71 @@
 
 
     // 풀이3
-    
+    // 한글로 풀이
+    // 1) 함수 printNumbers(from, to)를 선언하기
+    // 2) 1초 간격으로(setInterval(함수, 1000)) from 값을 출력시키기 
+    // 3) 출력되는 숫자를 1씩 증가시키기 ( +1, ++)
+    // 4) to 값 까지만 (조건: from === to, from >= to)출력하고 멈추기(clearInterval(변수))
+
+      // function printNumbers(from, to) {
+    //   const timerId = setInterval(function() {
+    //     document.write(from);
+    //     if (from >= to) {
+    //       clearInterval(timerId)
+    //     }
+    //     from++;
+    //   },1000);
+    // }
+
+    // printNumbers(5,15)
 
     let fromNum = prompt(' from값 입력  ')
     let toNum = prompt(' to값 입력  ')
-    
-    const counter = setInterval(function() {
-    fromNum++;
-    console.log(fromNum);
-    if (fromNum >=  toNum) {
-    clearInterval(counter)
-    }
+      
+    const counter = setInterval(function () {
+      fromNum++;
+      console.log(fromNum);
+      if (fromNum >= toNum) {
+        clearInterval(counter)
+      }
     }, 100);
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
   </script>
 </head>
+
 <body>
-  
+
 </body>
+
 </html>

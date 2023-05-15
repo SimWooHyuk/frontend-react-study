@@ -1,0 +1,72 @@
+const a = prompt('줄이고 싶은 말은?');
+const b = a.split(' ');
+let c = '';
+for (let i = 0; i < b.length; i++) {
+  c = c + b[i][0];
+}
+
+document.write('입력:  '+ a);
+document.write('<br>');
+document.write('출력:  '+ c);
+
+
+
+const a = prompt('추가할 속성의 이름을 입력하세요:');
+const b = prompt('추가할 속성의 값을 입력하세요:');
+
+  const userInfo = {
+    name: 'Goni Kim',
+    age: 30
+  };
+userInfo[a] = b;
+console.log(userInfo);
+
+
+const id = prompt('아이디를 입력하세요')
+if (id == '') {
+  alert('빈문자는 쓸수 없습니다')
+} else {
+  document.write(`${id} 님 환영합니다!`)
+}
+
+let aa = NaN
+let bb = 1
+let cc = "";
+let dd = 0;
+let ee = undefined;
+let ff = aa || bb || cc || dd || ee;
+
+console.log(ff)
+
+let result = 0;
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 === 0) {
+  result +=i;
+  }
+}
+document.write(result)
+
+for (let i = 1; i <= 6; i++) {
+  for (let z = 1; z <= 6; z++) {
+    if (i + z=== 6) {
+      document.write(`[${i},${z}] <br>`)
+    }
+  }
+}
+
+const fileName = '기획서 수정.최종본.진짜마지막.PDF';
+
+document.write('추출결과: ' +(fileName.substr( (fileName.lastIndexOf(".")+1 - fileName.length) ) ));
+
+
+const a1 = ['Kim', 'Lee', 'Park'];
+const a2 = 'Choi';
+const copyArr = [...a1];
+
+resultArr = copyArr.concat(a2);
+document.write(resultArr)
+
+const yourName = prompt('당신의 이름은?', '');
+const name = yourName;
+result = name || '손님'
+document.write(result)

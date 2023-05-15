@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +14,7 @@
     // min(2, 5) == 2
     // min(3, -1) == -1
     // min(1, 1) == 1
-    
+
 
     // 풀이1-1
     const first = Number(prompt('첫번째 숫자를 적어주세요'))
@@ -21,20 +22,22 @@
     let minNum = 0;
     function min(num1, num2) {
       if (num1 > num2) {
-      minNum = num2;
+        minNum = num2;
       } else if (num1 < num2) {
-      minNum = num1;
+        minNum = num1;
       } else if (num1 === num2) {
-      minNum = num1;
+        minNum = num1;
       }
     }
-    
+
     min(first, sec)
 
     document.write(`min (${first}, ${sec}) === ${minNum}`)
   </script>
 </head>
+
 <body>
-  
+
 </body>
+
 </html>
