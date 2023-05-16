@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    
+  <script>
+    // 새로운 문자열 메소드
+
+    // 1.startsWith()
+    // 전달한 값으로 문자열이 시작하는지 확인
+    const code = 'ABCDEFG';
+
+    console.log(code.startsWith('ABB')); // false  
+    console.log(code.startsWith('abc')); // false // 대소문자 구별함
+    console.log(code.startsWith('ABC')); // true
+    console.log(code.startsWith('DEF', 3)); // true 검사 시작점 지정
+
+    // 2.endsWith
+    // 전달한 값으로 문자열이 끝나는지 확인
+    console.log(code.endsWith('DDD')); // false
+    console.log(code.endsWith('efg')); // false // 대소문자 구별함 
+    console.log(code.endsWith('EFG')); // true
+    console.log(code.endsWith('EF', 6)); // true // Length문자열의 시작부분부터 얼마만큼만 확인할지 길이 지정
+    // 첫 6개 문자인 'ABCDEF'만을 고려, EF로 끝나므로 true
+
+    // 3. includes()
+    // 전달한값이 문자열에 포함되어 있는지 확인
+    console.log(code.includes('ABB')); // false
+    console.log(code.includes('abc')); // false // 대소문자 구별함
+    console.log(code.includes('CDE')); // true 
+
+    // 4. repeat()
+    // 문자열을 지정한 횟수만큼 반복
+    const hello = 'Hi';
+    console.log(hello.repeat(10));
+
+    // ES6차 이후에 추가된 메소드: 
+    // matchAll(), // 매치되는 모든 것들을 찾아줌
+    // replaceAll() , // 어떠한 객체의 문자열을 모두 찾아서 바꿈
+    // trimStart(), // 앞에 공백 자르기
+    // trimEnd(), // 뒤에 공백 자르기
+    // padStart(), // 문자열 앞에 특정한 무언가를 추가
+    // padEnd() // 문자열 뒤에 특정한 무언가를 추가
+    
+    // =========================================================
+    // 4-1번 문제
+    let a = "Hello, ";
+    let b = "is ";
+    let c = "my ";
+    let d = "name ";
+    let e = "Tom";
+    let result = `${a}${c}${d}${b}${e}`;
+    console.log(result)
+// ============================================================
+    // 4-2번 문제
+    let f = "1 ";
+    let g = "2 ";
+    let h = "plus ";
+    let i = "3 ";
+    let j = "equals ";
+    let result2 = `${f}${h}${g}${j}${i}` 
+    console.log(result2)
+    // ========================================================
+    // 4-3번 문제
+    let str = `this is a very long text
+a very long text`
+    console.log(str)
+    // ========================================================
+    // 5-1번 문제
+    // 정답 1번
+    // ========================================================
+    // 5-2번 문제
+    // 정답 2번
+    // ========================================================
+    // 5-3번 문제
+    let str2 = "Na" 
+    let bat = "BatMan"
+    let batMan =`${str2.repeat(8)} ${bat}`
+    console.log(batMan)
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
