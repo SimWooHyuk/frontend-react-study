@@ -7,14 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-const yourName = prompt('당신의 이름은?', '');
-const name = yourName;
-function result(yourName) {
-  if (yourName == '') {
-    name === '손님'
-  }
+const a = prompt('줄이고 싶은 말은?');
+const b = a.split(' ');
+let c = '';
+for (let i = 0; i < b.length; i++) {
+c = c + b[i][0];
 }
-document.write(result)
+document.write('입력: '+ a);
+document.write('<br> ');
+document.write('출력: '+ c);
+console.log(b);
   </script>
 </head>
 
