@@ -6,21 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-  const race = '100m dash';
-const runners = ['Kim', 'Lee', 'Park'];
 
-const results = runners.map(function (runner, index) {
-  return {
-    name: runner,
-    race: race,
-    place: index + 1
-  };
-});
-console.log(results);
+// [문항13] 보기에 주어진 회원 데이터에서 입력받은 id에 해당하는 멤버를 삭제한 새로운 배열을 만들어
+// 그 결과를 리턴하는 함수 deleteMember()를 만들어보세요.
+// 배열의 filter() 함수 사용
 
-
+// deleteMember('a3'); 호출 시 출력 결과는 아래와 같습니다.
+[
+{ id: 'a1', name: 'Goni', age: 36 },
+{ id: 'a2', name: 'Pony', age: 32 },
+{ id: 'a4', name: 'Moly', age: 24 },
+{ id: 'a5', name: 'Noni', age: 45 }
+]
+const members = [
+    { id: 'a1', name: 'Goni', age: 36 },
+    { id: 'a2', name: 'Pony', age: 32 },
+    { id: 'a3', name: 'Tony', age: 12 },
+    { id: 'a4', name: 'Moly', age: 24 },
+    { id: 'a5', name: 'Noni', age: 45 }
+];
+const deleteNum = prompt('a1~a5 중 하나 입력')
+function deleteMember(id) {
+  const whoDeleteMember = members.filter(member => member.id !== id);
+  return whoDeleteMember;
+}
+const result = deleteMember(`${deleteNum}`);
+console.log(result);
   </script>
-</head>
+</head> 
 <body>
   
 </body>
