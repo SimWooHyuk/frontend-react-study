@@ -2,7 +2,7 @@ import CommentEx from "./5.3/5.6/CommentEx";
 import Comment from "./5.3/Comment";
 
 // 댓글 데이터를 별도의 객체로 분리하고 반복 가능한 배열에 담기
-const comment = [
+const comments = [
   {
     name: '김갑수',
     content: '안녕하세요.'
@@ -39,16 +39,14 @@ function CommentList(props) {
       (map(): 배열 안에 있는 각 요소를 변환하여 새로운 배열을 만듦) 
       앞으로 리액트에서 배열을 동적으로 랜더링 해야 한다 할때는 &&&&&무조건&&&&& map() 함수를 사용하여
       일반 데이터 배열을 리액트 엘리먼트로 이루어진 배열로 변환해주면 됨*/}
-      {comments.map((comment, index) => {
+      {/* {comments.map((comment, index) => {
         return (
           <Comment name={comment.name} content={comment.content} />
         );
-      })}
+      })} */}
+      {comments.map(comment => <Comment name={comment.name} content={comment.content} />)};
 
-      {/* map() 함수의 결과 */}
-      {
-        [김갑수안녕하세요.김을수반갑습니다.김병수행복하세요.김정수사랑하세요.김무수건강하세요.]
-      }
+
     </div>
   )
 }

@@ -9,6 +9,12 @@ import Clock from './chapter4/Clock';
 import PropsUse from './chapter5/5.3/PropsUse';
 import Comment from './chapter5/5.3/Comment';
 import CommentList from './chapter5/CommentList';
+import Notification from './chapter6/Notification';
+import NotificationList from './chapter6/NotificationList';
+import Counter from './chapter7/7.2/Counter';
+import SetStateMerger from './chapter7/7.2/SetStateMerge';
+import SetStateMerge from './chapter7/7.2/SetStateMerge';
+import CounterEffect from './chapter7/7.3/ex1/CounterEffect';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Root Dom Node에 랜더링 하도록 하는 함수
@@ -38,10 +44,32 @@ root.render(
   // root.render(
   //   <Comment />
   // );
-  root.render(
-    <CommentList />
-  );
+  // root.render(
+    // <CommentList />
+  // );
 
+  // 5장 예제
+  // root.render(
+  //   <PropsUse />
+  // );
+
+  // 6장 예제
+  // root.render(
+  //   <NotificationList />
+  // );
+
+  // 7장 예제
+  // root.render(
+  //   <Counter />
+  // );
+  // 8장 예제
+  // root.render(
+  //   <SetStateMerge />
+  // );
+  // 9장 예제
+  root.render(
+    <CounterEffect />
+  );
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

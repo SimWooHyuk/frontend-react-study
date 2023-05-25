@@ -1,4 +1,6 @@
-function UserInfo(params) {
+import Avatar from "./Avartar";
+
+function UserInfo(props) {
   return (<div className="user-info">
         <Avatar user={props.user}/>
           <div className="user-info-name">
