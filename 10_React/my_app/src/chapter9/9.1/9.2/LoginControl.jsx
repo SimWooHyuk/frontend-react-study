@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Greeting from '../Greeting';
+
 
 function LoginButton(props) {
   return (
@@ -8,38 +9,41 @@ function LoginButton(props) {
     </button>
   );
 }
-function LogOutButton(props) {
+
+function LogoutButton(props) {
   return (
     <button onClick={props.onClick}>
-      LoginOut
+      Logout
     </button>
   );
 }
+
 function LoginControl(props) {
-  const [isLoggedIn, setisLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLoginClick = () => {
-    setisLoggedIn(ture)
-  }
-  const handleLogOutClick = () => {
-    setisLoggedIn(false)
-  }
+    setIsLoggedIn(true);
+  };
+
+  const handleLogoutClick = () => {
+    setIsLoggedIn(false);
+  };
 
   let button;
   // 이 예제의 포인트!
   // button 변수에 컴포넌트 대입(결과적으로는 리액트 엘리먼트 저장됨)
   if (isLoggedIn) {
-    button = <LogOutButton on click= {handleLogOutClick} />
+    button = <LogoutButton onClick={handleLogoutClick} />
   } else {
-  button = <LogInButton on click= {handleLogInClick} />
+    button = <LoginButton onClick={handleLoginClick} />
   }
+
   return (
     <div>
-      <Greeting isLoggedIn={isLoggedIn}/>
+      <Greeting isLoggedIn={isLoggedIn} />
       {button}
     </div>
   );
 }
 
 export default LoginControl;
-

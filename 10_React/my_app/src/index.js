@@ -22,6 +22,7 @@ import Toggle from './chapter8/8.1/Toggle';
 import MyButton from './chapter8/8.2/MyButton';
 import ConfirmButton from './chapter8/ConfirmButton';
 import Greeting from './chapter9/9.1/Greeting';
+import LoginControl from './chapter9/9.1/9.2/LoginControl';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Root Dom Node에 랜더링 하도록 하는 함수
@@ -54,8 +55,11 @@ root.render(
   // <ConfirmButton />
 
   // 9장 예제
-  <Greeting isLoggedIn={true}/>
+  // <Greeting isLoggedIn={true}/>
+  // <Greeting />
+  <LoginControl />
 );
+
 
 // 4장 예제
 // 1초마다 Clock 컴포넌트를 렌더링 하는 코드

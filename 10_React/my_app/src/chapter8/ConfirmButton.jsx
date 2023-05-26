@@ -3,13 +3,16 @@
 import { useState } from "react";
 
 function ConfirmButton() {
-  const [isConfirmed, setIsConfirmed] = useState(true)
-  const a = () => {
-    setIsConfirmed(!isConfirmed)
+  const [isConfirmed, setIsConfirmed] = useState(false)
+  // const handleConfirm = () => {
+  //   setIsConfirmed(!isConfirmed)
+  // } // 비동기함수
+  const handleConfirm = () => {
+    setIsConfirmed(isConfirmed => !isConfirmed);
+  }; // 동기함수
   
-  }
   return (
-    <button type="button" onClick={a} disabled={!isConfirmed}>{isConfirmed ? '확인하기' : '확인됨'}</button> 
+    <button type="button" onClick={handleConfirm} disabled={isConfirmed}>{isConfirmed ? '확인하기' : '확인됨'}</button> 
   );
   }
 
