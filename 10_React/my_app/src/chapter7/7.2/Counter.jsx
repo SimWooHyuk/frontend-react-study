@@ -57,7 +57,8 @@ function Counter(props) {
           >{text}</button>
         <p></p>
         <button type="button" onClick={() => {setFinish(true)}}
-          disabled={finish}>{finish ? '마감' : '신청'}</button>
+          disabled={finish}>{finish ? '마감' : '신청'}</button> 
+          {/* 비활성화 */}
     </div>
   );
 }
