@@ -19,21 +19,47 @@ import React, { useState } from 'react';
 // 2) 어려우면 일단 각각의 state를 따로 선언해도 되고 객체 형태로 한번에 관리해도 됨
 
 function SignUp(props) {
-  const [Inputs, setInputs] = useState({
-    name: '',
-    gender:'',
-  })
-  const {name, gender} = Inputs;
+  //   const [inputs, setInputs] = useState({
+  //     name: '',
+  //     gender:'',
+  //   })
+  //   const {name, gender} = inputs;
 
+  // const [nameChange, setNameChange] = useState('');
+  // const [genderChange, setGenderChange] = useState('');
+
+  // 객체 하나로 관리 시
+  const [inputs, setInputs] = useState({
+    name: '',
+    gender: '남자'
+  });
+  const { name, gender } = inputs
+
+  // const handleNameChange = (e) => {
+  //   setNameChange(e.target.value)
+  // }
+  // const handleGenderChange = (e) => {
+  //   setGenderChange(e.target.value)
+  // }
+
+  // 객체 하나로 사용시
   const handleInputChange = (e) => {
-    const {type, name, checked, value} = e.target;
-    const inputValue = type === 'checked' ? checked : value;
+    const { name, value } = e.target
+    console.log(name, value);
+
+    //방법 1
+    // const copyObj = {
+    //   ...inputs
+    // };
+    // copyObj[name] = value;
+    // setInputs(copyObj)
   
-  setInputs(prevInputs => ({
-    ...prevInputs,  
-    [name]: inputValue
-  }))
-  }
+  setInputs(inputs => ({
+    ...inputs, // 기존의 inputs 객체를 복사한뒤
+    [name]: value // name 값을 키로 가진 속성의 값을 value로 설정
+  }))}
+
+
   const handleSubmit = (e) => {
     alert(`이름: ${name}. 성별: ${gender} `);
     e.preventDefault();
@@ -42,28 +68,19 @@ function SignUp(props) {
     <form onSubmit={handleSubmit}>
       <label>
         이름
-        <input 
-        type="text" 
-        value='name'
-        onchange={handleInputChange}/>
+        <input
+          type="text"
+          name='name'
+          value={name}
+          onChange={handleInputChange} />
       </label>
       <br />
-      성별:   
       <label>
-        남자
-        <input 
-        type="radio" 
-        name='name'
-        value='Man'
-        checked={gender === 'Man'}
-        onchange={handleInputChange}/>
-        여자
-        <input 
-        type="radio" 
-        name='name'
-        value='Woman'
-        checked={gender === 'Woman'}
-        onchange={handleInputChange}/>
+        성별:
+        <select name='gender' value={gender} onChange={handleInputChange}>
+          <option value="남자">남자</option>
+          <option value="여자">여자</option>
+        </select>
       </label>
       <button type='submit'>제출</button>
     </form>
