@@ -38,6 +38,11 @@ import ComponentVariable from './chapter7/7.6/ComponentVariable';
 import Reservation from './chapter11/11.4/Reservation';
 import ReservationRefactoring from './chapter11/11.4/ReservationRefactoring';
 import SignUp from './chapter11/11.4/SignUp';
+import UnitCalculator from './chapter12/UnitCalculator';
+import WelcomeDiaLog from './chapter13/13.1.1.1/WelcomeDiaLog';
+import SplitPaneSection from './chapter13/13.1.1.2/SplitPaneSection';
+import DiaLog from './chapter13/13.1.2/DiaLog';
+import Card from './chapter13/Card';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Root Dom Node에 랜더링 하도록 하는 함수
@@ -91,7 +96,15 @@ root.render(
   // <FileInput/>
   // <Reservation/>
   // <ReservationRefactoring/>
-  <SignUp />
+  // <SignUp />
+  // 12장
+  // <UnitCalculator />
+  // 13장
+  // <WelcomeDiaLog />
+  // <SplitPaneSection />
+  // <DiaLog />
+  <Card />
+
 );
 
 
