@@ -1,33 +1,34 @@
 import React from 'react';
-import { Children } from 'react';
+import './SplitPaneSection.css';
 
-function Contact() {
-  return <div className='Contacts' />
+function Contacts() {
+  return <div className='Contacts' />;
 }
 
 function Chat() {
-  return <div className='Chat' />
+  return <div className='Chat' />;
 }
 
 // 화면을 왼쪽과 오른쪽으로 분할해서 보여주는 컴포넌트
 function SplitPane(props) {
-  return (
-    // <div className='SplitPane'>
-    //   <div className='SplitPane-left'>
-    //   {props.children[0]}
-    // </div>
-    //   <div className='SplitPane-right'>
-    //   {props.children[0]}
-    //   </div>
-    // </div>
+  console.log(props);
 
-    // 2.
+  return (
     <div className='SplitPane'>
-      <div className='SplitPane-left'>
-      {props.left}
-    </div>
+      {/* 1 */}
+      {/* <div className='SplitPane-left'>
+        {props.children[0]}
+      </div>
       <div className='SplitPane-right'>
-      {props.right}
+        {props.children[1]}
+      </div> */}
+
+      {/* 2 */}
+      <div className='SplitPane-left'>
+        {props.left}
+      </div>
+      <div className='SplitPane-right'>
+        {props.right}
       </div>
     </div>
   );
@@ -40,16 +41,15 @@ function SplitPaneSection(props) {
   return (
     // 1.
     // <SplitPane>
-    //   <Contact />
+    //   <Contacts />
     //   <Chat />
     // </SplitPane>
+
     // 2.
-    <SplitPane 
-      left = {<Contact />}
-      right = {<Chat />}
-      />
-      
-    
+    <SplitPane
+      left={<Contacts />}
+      right={<Chat />}
+    />
   );
 }
 
