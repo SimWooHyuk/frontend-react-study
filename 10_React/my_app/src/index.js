@@ -37,14 +37,14 @@ import FileInput from './chapter11/11.3/FileInput';
 import ComponentVariable from './chapter7/7.6/ComponentVariable';
 import Reservation from './chapter11/11.4/Reservation';
 import ReservationRefactoring from './chapter11/11.4/ReservationRefactoring';
-import SignUp from './chapter11/SignUp';
+import SignUp from './chapter11/11.4/SignUp';
 import UnitCalculator from './chapter12/UnitCalculator';
 import WelcomeDialog from './chapter13/13.1.1.1/WelcomeDialog';
 import SplitPaneSection from './chapter13/13.1.1.2/SplitPaneSection';
-import DialogContainer from './chapter13/13.1.2/DialogContainer';
 import SingUpDialog from './chapter13/13.1.3/SingUpDialog';
 import ProfileCard from './chapter13/ProfileCard';
 import Card from './chapter13/Card';
+import DarkOrLight from './chapter14/DarkOrLight';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Root Dom Node에 랜더링 하도록 하는 함수
 // 처음으로 랜더링할 컴포넌트를 지정하는데 App 컴포넌트가 기본적으로 들어가있음
@@ -103,8 +103,12 @@ root.render(
   // 13장
   // <WelcomeDialog />
   // <SplitPaneSection />
-  // <Dialog />
-  <Card />
+  // <DialogContainer />
+  // <SingUpDialog />
+  // <ProfileCard />
+  // <Card />
+    // 14장 예제
+    <DarkOrLight />
 
 );
 
