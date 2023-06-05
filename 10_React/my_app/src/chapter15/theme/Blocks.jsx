@@ -6,9 +6,9 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   padding: 1rem;
-  background-color: lightgray;
+  /* background-color: lightgray; */
   /* 테마 사용해보기 */
-  /* background-color: ${props => props.theme.grayBg}; */
+  background-color: ${props => props.theme.grayBg};
 `;
 
 const Block = styled.div`
@@ -38,11 +38,6 @@ const blockItems = [
     padding: '2rem',
     backgroundColor: 'blue',
   },
-  {
-    label: '4',
-    padding: '2rem',
-    backgroundColor: `black`,
-  }
 ];
 
 function Blocks(props) {
