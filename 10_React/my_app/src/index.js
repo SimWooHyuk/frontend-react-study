@@ -45,6 +45,10 @@ import SingUpDialog from './chapter13/13.1.3/SingUpDialog';
 import ProfileCard from './chapter13/ProfileCard';
 import Card from './chapter13/Card';
 import DarkOrLight from './chapter14/DarkOrLight';
+import DialogContainer from './chapter13/13.1.2/DialogContainer';
+import StyledPage from './chapter15/StyledPage';
+import ThemeApp from './chapter15/theme/ThemeApp';
+import Blocks from './chapter15/theme/Blocks';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Root Dom Node에 랜더링 하도록 하는 함수
 // 처음으로 랜더링할 컴포넌트를 지정하는데 App 컴포넌트가 기본적으로 들어가있음
@@ -108,7 +112,10 @@ root.render(
   // <ProfileCard />
   // <Card />
     // 14장 예제
-    <DarkOrLight />
+    // <DarkOrLight />
+    // 15장 예제
+    // <StyledPage />
+    <Blocks />
 
 );
 
