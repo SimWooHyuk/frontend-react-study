@@ -6,6 +6,7 @@ import PlacePage from './PlacePage';
 import HotGamePage from './HotGamePage';
 import NewGamePage from './NewGamePage';
 import AboutPage from './AboutPage';
+import NoMathchPage from './NoMatchPage';
 
 // 0. react-router-dom 설치하기
 // npm install react-router-dom
@@ -56,7 +57,7 @@ function SimpleRouter(props) {
         <Route path='/games' element={<GamePage />} />
         {/* 방법1. 서브 경로 설정 */}
         {/* <Route path='/games/hot' element={<HotGamePage />} />
-        <Route path='/games/new' element={<NewGamePage />} /> */}
+        <Route path='/games/new' element={<NewGamePage />} /> */} 
 
         {/* 방법2.Nested Route 방식*/}
         {/* 위 서브 경로 방식과 차이점: 부모 엘리먼트 + 자식 엘리먼트가 보임 */}
@@ -78,7 +79,12 @@ function SimpleRouter(props) {
         (꼭 위와 같이 쓰라고 정해진 규칙이 있는것은 아님) 
         URL 파라미터 예시: https://vibe.naver.com/album/9732422 (네이버 바이브)
         쿼리스트링 예시: /articles?**page=1&keyword=react (네이버 검색) */}
-        <Route path="/About" element={<AboutPage />}></Route>
+        <Route path='/about' element={<AboutPage />} />
+
+        {/* 위에 설정한 라우팅 경로 이외에 경우 */}
+        {/* *의 의미는 match anything */}
+        <Route path='*' element={<NoMathchPage />} />
+
 
       </Routes>
     </BrowserRouter>
