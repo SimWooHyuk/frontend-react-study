@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { MdCheckBox, MdCheckBoxOutlineBlank, MdRemoveCircleOutline } from 'react-icons/md';
 const TodoListItemWrapper = styled.div`
   padding: 1rem;
@@ -11,11 +11,24 @@ const Checkbox = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
+
+  svg{
+    /* 아이콘 스타일링 */
+    font-size: 1.5rem;
+    color: ${props => props.checked && '#22b8cf'};
+  }
 `;
 
 const Text = styled.div`
   margin-left: 0.5rem;
   flex: 1; // 차지할 수 있는 모든 영역 차지
+
+  ${props => props.checked &&
+  css`
+    color: #adb5bd;
+    text-decoration: line-through;
+  `
+  }
 `;
 
 const Remove = styled.div`
@@ -31,20 +44,22 @@ const Remove = styled.div`
 // 각 할 일 항목에 대한 정보를 보여주는 컴포넌트
 // todo 객체를 props로 받아와 상태에 따라 다른 스타일의 UI를 보여줌
 
-function TodoListItem({todo}) {
+function TodoListItem({ todo, onRemove }) {
   // const {todo: {id, text, checked}} = props
 
   // todo로 먼저 한번 분해해서 받은 경우
   const {id, text , checked } = todo;
   return (
     <TodoListItemWrapper>
-      <Checkbox>
-    <MdCheckBoxOutlineBlank />
+      <Checkbox checked={checked}>
+        {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
       </Checkbox>
-      <Text>
+      <Text checked={checked}>
         {text}
       </Text>
-      <Remove>
+      <Remove 
+      onClick={() => { onRemove(id);}}
+      >
       <MdRemoveCircleOutline />
       </Remove>
     </TodoListItemWrapper>
