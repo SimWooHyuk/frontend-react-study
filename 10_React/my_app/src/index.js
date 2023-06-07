@@ -24,7 +24,7 @@ import ConfirmButton from './chapter8/ConfirmButton';
 import Greeting from './chapter9/9.1/Greeting';
 import LoginControl from './chapter9/9.2/LoginControl';
 import MailBox from './chapter9/9.3/MailBox';
-import MainPage from './chapter9/9.3/MainPage';
+// import MainPage from './chapter9/9.3/MainPage';
 import LandingPage from './chapter9/LandingPage';
 import NumberList from './chapter10/10.1/NumberList';
 import ListKey from './chapter10/10.2/ListKey';
@@ -50,6 +50,10 @@ import StyledPage from './chapter15/StyledPage';
 import ThemeApp from './chapter15/theme/ThemeApp';
 import Blocks from './chapter15/theme/Blocks';
 import ParentComponent from './chapter7/7.5/ParentComponent';
+import SimpleRouter from './chapter16/SimpleRouter';
+import GamePage from './chapter16/GamePage';
+import PlacePage from './chapter16/PlacePage';
+import MainPage from './chapter16/MainPage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Root Dom Node에 랜더링 하도록 하는 함수
 // 처음으로 랜더링할 컴포넌트를 지정하는데 App 컴포넌트가 기본적으로 들어가있음
@@ -117,7 +121,12 @@ root.render(
     // 15장 예제
     // <StyledPage />
     // <ThemeApp />
-    <ParentComponent />
+    // <ParentComponent />
+    // 16장 예제
+    <SimpleRouter />
+    // <MainPage />
+    // <PlacePage />
+    // <GamePage />
 
 );
 

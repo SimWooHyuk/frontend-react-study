@@ -64,6 +64,8 @@ const handleSubmit = (e) => {
 
 
   return (
+    // form 태그 사용시 input에서 엔터키를 눌렀을 때도 submit 이벤트 발생
+    // 일반적으로 keyup 이벤트를 통해 엔터키를 감지하는 로직을 작성
     <TodoInsertWrapper onSubmit={handleSubmit}>
       <StyledInput type='text' placeholder='할 일을 입력하세요.' onChange={handleChange} value={value}/>
       <StyledButton type='submit'>
