@@ -24,6 +24,12 @@ function App() {
         {/* 여기서 :postId는 동적으로 변하는 파라미터를 위한 값 => URL 파라미터 */}
         {/* 경로(path)에 이렇게 콜론(:) 을 사용하고 파라미터명을 입력하면
          실제 컴포넌트에서 useParams() 훅을 사용해 postId로 해당 값을 가져올 수 있음 */}
+
+         {/* URL 파라미터를 여러개 쓰고 싶다면..? */}
+        {/* <Route path="/post/:postId/:otherValue/:anotherValue" element={<PostViewPage />} /> */}
+        {/* 필수가 아닌 옵션값으로 처리하고싶다면..? Optional Segments */}
+        <Route path="/post/:postId/:otherValue?/:anotherValue?" element={<PostViewPage />} />
+
       </Routes>
     </BrowserRouter>
   );
