@@ -1,20 +1,19 @@
 import { configureStore, createStore } from "@reduxjs/toolkit";
 import counterReducer from "../features/counter/counterSlice";
-
+import productReducer from "../features/product/productSlice";
 // 1. Redux Store 만들기
 // 전역 state를 보관하는 저장소
-// createStore() xxx 이제 안씀
+// createStore(); // deprecated
 // configureStore()를 쓰면 Redux DevTools 설정이 자동으로 추가됨
 // (Redux DevTools는 크롬 웹 스토어에서 따로 설치!)
 export const store = configureStore({
   reducer: {
     // 4. Redux Store에 Slice Reducers를 추가하기
-    // Slice Reucers를 Store에 등록을 해야 컴포넌트들이 전역 state를 사용 가능
-    // user: userReducer,
-    // product: productReducer,
+    // Slice Reducers를 Store에 등록을 해야 컴포넌트들이 전역 state를 사용 가능
     counter: counterReducer,
+    product: productReducer,
   }
-})
+});
 
 // (참고)
 // 한 개의 프로젝트는 단 하나의 스토어만 가질 수 있음
