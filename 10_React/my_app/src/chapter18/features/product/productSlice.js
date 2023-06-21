@@ -22,5 +22,8 @@ export const productSlice = createSlice({
 
 export const { addList, subList } = productSlice.actions;
 
-export const selectproductList = (state) => state.product.value; // 이렇게해두면 useSelector(selectproductList) 이렇게 쉽게 할수있음 // 선택자 함수 // 리팩터링
+
+export const selectProductList = (state) => state.product.productList;
+export const selectSelectedProduct = (state) => state.product.selectedProduct;
+ // 이렇게해두면 useSelector(selectproductList) 이렇게 쉽게 할수있음 // 선택자 함수 // 리팩터링
 export default productSlice.reducer;
