@@ -13,7 +13,7 @@ import yonexImg from "../images/yonex.jpg";
 // 서버에서 받아온 데이터라고 가정
 import data from "../data.json";
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllProducts, getMoreProducts, selectProductList ,  } from '../features/product/productSlice';
+import { getAllProducts, getMoreProducts, getMoreProductsAsync, selectProductList, selectedStatus ,  } from '../features/product/productSlice';
 import ProductListItem from '../components/ProductListItem';
 import ProductDetail from './ProductDetail';
 import { Button } from 'react-bootstrap';
@@ -29,6 +29,8 @@ const MainBackground = styled.div`
 function Main(props) {
   const dispatch = useDispatch();
   const productList = useSelector(selectProductList)
+  const status = useSelector(selectedStatus); // API 요청 상태 (로딩 상태)
+  // 처음 마운트 됐을 때 서버에 상품 목록 데이터를 요청하고
   // 처음 마운트 됐을 때 서버에 상품 목록 데이터를 요청하고
   //  그 결과를 리덕스 스토어에 전역 상태로 저장
   useEffect(() => {
@@ -40,11 +42,13 @@ function Main(props) {
   const handleGetMoreProducts = async () => {
     const result = await getProducts()
     if(!result) return; // 결과값이 없으면 함수 종료
-    dispatch(getAllProducts(result));
-
+    dispatch(getMoreProducts(result));
   };
 
-
+  const handleGetMoreProductsAsync = () => {
+    dispatch(getMoreProductsAsync());
+  }
+  console.log(handleGetMoreProductsAsync);
   return (
     <>
       {/* 메인 이미지 섹션 */}
@@ -80,16 +84,8 @@ function Main(props) {
               3) 상품 정보를 props로 넘겨서 데이터 바인딩하기
             */}
             {productList.map((product) => {
-              return (
-                <>
-                  <ProductListItem product={product} key={product.id} />
-                  {/* <ProductDetail product={product} key={product.id}/> */}
-                </>
-
-              )
-
-            }
-            )};
+              return <ProductListItem product={product} key={product.id} />;
+            })};
 
           </Row>
         </Container>
@@ -109,6 +105,11 @@ function Main(props) {
 
         {/* 위 HTTP 요청 코드를 함수로 만들어서 api 폴더로 추출하고, async/await로 바꾸기 */}
         <Button variant='secondary' className='md-4' onClick={handleGetMoreProducts}>
+          더보기
+        </Button>
+
+        {/* thunk를 이용한 비동기 작업 처리하기 */}
+        <Button variant='secondary' className='md-4' onClick={handleGetMoreProductsAsync}>
           더보기
         </Button>
       </section>

@@ -7,10 +7,10 @@ import axios from "axios";
 export  const getProducts = async () => {
   try {
   const response = await axios.get('https://my-json-server.typicode.com/SimWooHyuk/dbshop/products')
-
+    console.log(response);
   if (response.status === 200) { // 요청에대한 응답의 상태가 200 OK 일때만 결과를 리턴
-    return response.data
-    
+    return response.data;
+
   } else {
     throw new Error(`api error: ${response.status} ${response.statusText}`)
   }

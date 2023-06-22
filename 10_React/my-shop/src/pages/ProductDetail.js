@@ -35,11 +35,11 @@ function ProductDetail(props) {
   useEffect(() => {
     // 서버에서 특정 상품의 데이터를 가져오는 작업을 했다고 가정
     // ... api call ...
-    const FoundProdut = data.find((product) => {
+    const foundProdut = data.find((product) => {
       return product.id === productId;
     });
-    if (!FoundProdut) return;
-    dispatch(getSelectedProduct(FoundProdut))
+    if (!foundProdut) return;
+    dispatch(getSelectedProduct(foundProdut))
     
     // 숫자 포맷 적용
   },[]);
