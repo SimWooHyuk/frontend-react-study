@@ -16,11 +16,14 @@ const productSlice = createSlice({
     getSelectedProduct: (state, action) => {
       state.selectedProduct = action.payload
     },
-
+    getMoreProducts: (state, action) => {
+      console.log(action.payload);
+      state.productList.push(...action.payload)
+    }
   }
 });
 
-export const {getAllProducts, getSelectedProduct} = productSlice.actions;
+export const {getAllProducts, getSelectedProduct, getMoreProducts} = productSlice.actions;
 
 export const selectProductList = (state) => state.product.productList;
 

@@ -1,7 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 import 'bootstrap/dist/css/bootstrap.min.css'; // bootstrap CSS 추가 필수
-
+import 'react-toastify/dist/ReactToastify.min.css'; // reacttoastify css 추가
+import { ToastContainer } from "react-toastify";
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -10,6 +11,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./pages/Header";
 import Main from "./pages/Main";
 import ProductDetail from "./pages/ProductDetail";
+
 
 
 
@@ -65,6 +67,12 @@ function App() {
         </Route>
       </Routes>
 
+      <ToastContainer 
+        position="bottom-right"
+        autoclose={3000}
+        pauseOnFocusLoss={false}
+        theme="dark"
+      />
     </>
   );
 }
