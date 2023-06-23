@@ -11,6 +11,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./pages/Header";
 import Main from "./pages/Main";
 import ProductDetail from "./pages/ProductDetail";
+import Cart from "./pages/Cart";
 
 
 
@@ -28,6 +29,15 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: inherit;
   }
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.text-ellipsis {
+  white-space: nowrap; // 줄바꿈 안함
+      overflow: hidden; // 넘친부분 숨기기
+      text-overflow: ellipsis; // 넘친부분을 어떻게 보일지 지정 (ellipsis = 줄임표)
+}
 `
 
 function App() {  
@@ -63,7 +73,7 @@ function App() {
         {/* 상품별 상세페이지 여러개를 라우팅하려면? URL 파라미터 사용 */}
         {/* /detail/1 로 접속하면 productId에 1이 담김 */}
         <Route path="/detail/:productId" element={<ProductDetail />} />
-
+        <Route path="/cart" element={<Cart />}/>
         </Route>
       </Routes>
 

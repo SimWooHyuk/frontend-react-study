@@ -13,6 +13,7 @@ import { getAllProducts, getMoreProducts, getMoreProductsAsync, selectProductLis
 import ProductListItem from '../components/ProductListItem';
 import { getProducts } from '../api/productAPI';
 import { PulseLoader } from "react-spinners";
+import LatestView from '../components/LatestView';
 const MainBackground = styled.div`
   height: 500px;
   background-image: url(${yonexImg});
@@ -121,6 +122,8 @@ function Main(props) {
           더보기 {status}
         </Button>
       </section>
+      {/* 최근 본상품 */}
+      <LatestView />
     </>
   );
 }
