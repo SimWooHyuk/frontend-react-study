@@ -40,10 +40,10 @@ function ProductList() {
 
       <ul>
         {listItem.map((item) => (
-          <li key={index}>
+          <li key={item}>
             <div>{item.text}<button
               type='button'
-              onClick={() => handleDeleteNote(index)}
+              onClick={() => handleDeleteNote(item)}
             >
               삭제
             </button></div>
